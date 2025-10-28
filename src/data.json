@@ -1,0 +1,57 @@
+{
+  "_id": { "$oid": "68d08b756ba6475d638a5cc1" },
+  "email": "choucouneteam@gmail.com",
+  "password": "$2a$10$tKTsnAvCjcMUQcoKxEUP6.OHj1APvsmuQ1I8j5CfRsbrafQ4Lv5xC",
+  "name": "Darleine Thurin",
+  "ageRange": { "min": { "$numberInt": "25" }, "max": { "$numberInt": "50" } },
+  "gender": "male",
+  "interestedIn": ["female"],
+  "bio": "I am a great man on earth 🌎. ",
+  "profilePicture": {
+    "url": "https://via.placeholder.com/150/007bff/ffffff?text=M",
+    "publicId": "wbnrvmxp3cxk1hswg14x"
+  },
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      { "$numberDouble": "-74.7361529" },
+      { "$numberDouble": "40.2242498" }
+    ],
+    "address": "1241 Greenwood Ave, Trenton, NJ 08609, USA",
+    "city": "Trenton",
+    "state": "New Jersey",
+    "country": "United States",
+    "zipCode": "08609"
+  },
+  "occupation": "Driver ",
+  "education": "High School",
+  "religion": "Christianity",
+  "politicalViews": "Liberal",
+  "hobbies": ["Football", "Travel", "Reading"],
+  "interests": [],
+  "preferences": {},
+  "settings": {},
+  "isVerified": true,
+  "authProvider": "email",
+  "isOnline": true,
+  "isEmailVerified": true,
+  "emailVerificationCode": null,
+  "emailVerificationExpires": null,
+  "profileComplete": true,
+  "onboardingComplete": true,
+  "showSocialConnections": false,
+  "isVIP": true,
+  "isAdmin": true,
+  "termsAndConditions": true,
+  "isActive": true,
+  "blockedUsers": [],
+  "blockedBy": [],
+  "lastActive": { "$date": { "$numberLong": "1761438888645" } },
+  "createdAt": { "$date": { "$numberLong": "1761414493704" } },
+  "more_pictures": [],
+  "updatedAt": { "$date": { "$numberLong": "1761443433278" } },
+  "__v": { "$numberInt": "1" },
+  "age": { "$numberInt": "38" },
+  "height": { "$numberInt": "6" }
+ 
+}

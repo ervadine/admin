@@ -1,0 +1,266 @@
+/* src/pages/UsersManagement.css */
+.users-management-container {
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.stats-overview {
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card .card-body {
+  padding: 1.5rem;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.filters-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.filters-card .card-body {
+  padding: 1.5rem;
+}
+
+.users-table-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.users-table-card .card-body {
+  padding: 0;
+}
+
+.users-table {
+  margin: 0;
+}
+
+.users-table th {
+  background: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 1rem;
+}
+
+.users-table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-avatar .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-avatar .avatar-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details strong {
+  color: #2c3e50;
+}
+
+.user-details small {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-buttons .btn {
+  padding: 0.25rem 0.5rem;
+}
+
+.user-avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-avatar-large .avatar-img-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-avatar-large .avatar-fallback-large {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.user-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  color: #2c3e50;
+}
+
+.detail-item span {
+  color: #6c757d;
+}
+
+/* Image optimization */
+.avatar-img,
+.avatar-img-large {
+  object-fit: cover;
+  background-color: #f8f9fa;
+}
+
+/* Loading state for images */
+.avatar-img[src=""],
+.avatar-img:not([src]) {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .users-management-container {
+    padding: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-avatar-large {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+  
+  .user-avatar-large .avatar-fallback-large {
+    font-size: 1.5rem;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 576px) {
+  .stats-overview .col-md-2 {
+    margin-bottom: 1rem;
+  }
+  
+  .filters-card .col-md-4,
+  .filters-card .col-md-2 {
+    margin-bottom: 1rem;
+  }
+}
