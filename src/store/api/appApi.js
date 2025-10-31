@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use environment variable or fallback to production URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://choucoune.onrender.com/api/v1';
+const API_BASE_URL = 'https://choucoune.onrender.com/api/v1';
 
 console.log('[API] Using URL:', API_BASE_URL);
 

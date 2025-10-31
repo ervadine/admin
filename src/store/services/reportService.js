@@ -14,7 +14,7 @@ class ReportService {
   // Get all reports (admin only)
   async getAllReports(params = {}) {
     try {
-      const response = await api.get('/reports/reports', { params });
+      const response = await api.get('/reports', { params });
       return response.data;
     } catch (error) {
       throw new Error(this.handleError(error));

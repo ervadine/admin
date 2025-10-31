@@ -3,13 +3,20 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // Uses localStorage for web
 import authReducer from './redux/authSlice';
 import subscriptionReducer from './redux/subscriptionSlice';
-
+import reportReducer from './redux/reportSlice'
 // Persist configuration for auth
 const authPersistConfig = {
   key: 'auth',
   storage: storage,
   timeout: null,
 };
+
+const reportConfig = {
+  key: 'reports',
+  storage: storage,
+  timeout: null,
+};
+
 
 // Persist configuration for subscription
 const subscriptionPersistConfig = {
@@ -46,49 +53,18 @@ const subscriptionPersistConfig = {
   ]
 };
 
-// Persist configuration for block
-const blockPersistConfig = {
-  key: 'block',
-  storage: storage,
-  timeout: null,
-  whitelist: [
-    'blockedUsers',
-    'blockStatus'
-  ],
-  blacklist: [
-    'loading',
-    'error',
-    'pagination'
-  ]
-};
 
-// Persist configuration for notification
-const notificationPersistConfig = {
-  key: 'notification',
-  storage: storage,
-  timeout: null,
-  whitelist: [
-    'devices',
-    'currentDevice',
-    'settings',
-    'notifications',
-    'unreadCount'
-  ],
-  blacklist: [
-    'loading',
-    'errors',
-    'success'
-  ]
-};
+
 
 // Create persisted reducers
 const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
 const persistedSubscriptionReducer = persistReducer(subscriptionPersistConfig, subscriptionReducer);
-
+const reportedReducer = persistReducer(reportConfig, reportReducer);
 export const store = configureStore({
   reducer: {
     auth: persistedAuthReducer,
     subscription: persistedSubscriptionReducer,
+    reports: reportedReducer
   },
   middleware: (getDefaultMiddleware) => 
     getDefaultMiddleware({

@@ -2,8 +2,8 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   // Use environment variables for server URLs
-  const SERVER_URL = process.env.REACT_APP_SERVER_URL || 'https://choucoune.onrender.com';
-  const API_BASE_URL = process.env.REACT_PUBLIC_API_URL || 'https://choucoune.onrender.com/api/v1';
+  const SERVER_URL = 'https://choucoune.onrender.com';
+  const API_BASE_URL = 'https://choucoune.onrender.com/api/v1';
   
   console.log(`Server URL: ${SERVER_URL}`);
   console.log(`API Base URL: ${API_BASE_URL}`);
